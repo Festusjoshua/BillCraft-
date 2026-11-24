@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BillCraft — Invoicing, made simple.</title>
+  <meta name="description" content="A simple, professional invoice generator for freelancers, creatives, agencies and small business owners to create, customize, download and manage professional invoices in minutes.">
+
+  <!-- STRICT BRAND REQUIREMENT: Genuine Aeonik Typography -->
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Aeonik', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a8a',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- External Libraries: Supabase JS & html2pdf.js (Selectable Text PDF Generator) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-blue-500 selection:text-white">
+  
+  <!-- Main Single-Page SaaS Application Root -->
+  <div id="app-root">
+    <!-- Populated dynamically by bundle.js -->
+    <div class="min-h-screen flex items-center justify-center bg-slate-50">
+      <div class="text-center space-y-3">
+        <div class="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center text-white font-bold text-xl mx-auto shadow-lg shadow-blue-500/25 animate-pulse">
+          B
+        </div>
+        <div class="text-sm font-bold text-slate-800">Loading BillCraft...</div>
+        <div class="text-xs text-slate-400">Strict Aeonik Typography • Fintech Invoicing</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Unified Application Bundle (runs on both file:// and http://) -->
+  <script src="bundle.js"></script>
+</body>
+</html>
